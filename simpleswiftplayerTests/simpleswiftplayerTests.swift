@@ -1,6 +1,6 @@
 //
 //  simpleswiftplayerTests.swift
-//  simpleswiftplayerTests
+//  SimpleSwiftAudioPlayer
 //
 //  Created by Masahiro Tamamura on 2019/08/12.
 //  Copyright © 2019 Masahiro Tamamura. All rights reserved.

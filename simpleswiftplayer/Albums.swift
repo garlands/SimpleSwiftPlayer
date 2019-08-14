@@ -1,6 +1,6 @@
 //
 //  Albums.swift
-//  SimpleSwiftPlayer
+//  SimpleSwiftAudioPlayer
 //
 //  Created by Masahiro Tamamura on 2018/08/12.
 //  Copyright © 2018年 Masahiro Tamamura. All rights reserved.
@@ -24,9 +24,8 @@ class Albums {
             print("albumlists is nil")
             return albums
         }
-        //        let albumlists = query.collections
         for albumlist : MPMediaItemCollection in albumlists {
-            let item : MPMediaItem = albumlist.representativeItem!
+            if let item : MPMediaItem = albumlist.representativeItem {
             let artist = item.value(forProperty: MPMediaItemPropertyArtist)
             let title = item.value(forProperty: MPMediaItemPropertyAlbumTitle)
             print("titale \(String(describing: title)) artist \(String(describing: artist))")
@@ -36,11 +35,9 @@ class Albums {
             }else{
                 artwork_image = UIImage(named: "no_image.png")!
             }
-            //            let artwork = item.value(forProperty:MPMediaItemPropertyArtwork) as! MPMediaItemArtwork
-            //            MPMediaItemArtwork.init(image: UIImage (data: (self.musicModel?.musicimg)!)!)] as [String : Any]
             let album : Album = Album.init(title: title as! String, artist: artist as! String, artworkImage: artwork_image )
             albums.append(album)
-            
+            }
         }
         return albums
     }

@@ -1,6 +1,6 @@
 //
 //  AlbumCollectionViewController.swift
-//  SimpleSwiftPlayer
+//  SimpleSwiftAudioPlayer
 //
 //  Created by Masahiro Tamamura on 2018/08/11.
 //  Copyright © 2018年 Masahiro Tamamura. All rights reserved.
@@ -14,7 +14,7 @@ private var albums : Array<Album>?
 
 class AlbumCollectionViewController: UICollectionViewController {
     
-    var avmgr :AudioManager?
+    let avmgr :AudioManager = AudioManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,7 @@ class AlbumCollectionViewController: UICollectionViewController {
         albums = al.musicLibraryAlbums()
         
         // Register cell classes
-        avmgr = AudioManager.sharedInstance
-        let title = avmgr?.getCurrentAlbumTitle()
+        let title = avmgr.getCurrentAlbumTitle()
         print(title)
 //        albums = AlbumLists.musicLibraryAlbums()
         
@@ -109,7 +108,6 @@ class AlbumCollectionViewController: UICollectionViewController {
 //        next?.album = albums[indexPath.row]
         
     }
-    
 
     // MARK: UICollectionViewDataSource
 
@@ -149,13 +147,14 @@ class AlbumCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let album : Album = albums![indexPath.row]
-        avmgr?.album_index = indexPath.row
-        avmgr?.albums = albums
-        avmgr?.album_title = album.title
+        avmgr.album_index = indexPath.row
+        avmgr.albums = albums
+        avmgr.album_title = album.title
+        avmgr.setupAlbum()
         let tr = Tracks.init()
-        avmgr?.tracks = tr.musicLibraryTracks_album(albumTitle: album.title)
+        avmgr.tracks = tr.musicLibraryTracks_album(albumTitle: album.title)
         
-        if let tr2 = avmgr?.tracks {
+        if let tr2 = avmgr.tracks {
             print("\(tr2.count)")
         }
         
@@ -204,14 +203,14 @@ class AlbumCollectionViewController: UICollectionViewController {
 extension AlbumCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellnumber = 2
+//        let cellnumber = 2
         let bounds = UIScreen.main.bounds
-        let space = Int(bounds.size.width * 0.01)
-        let bar = Int(bounds.size.height * 0.03)
-        let w = (Int(bounds.size.width) - space * 3) / cellnumber
-        let h = (Int(bounds.size.width) + bar - space * 3) / cellnumber
-        
-        return CGSize(width: w, height: h)
+//        let space = Int(bounds.size.width * 0.01)
+//        let bar = Int(bounds.size.height * 0.03)
+//        let w = (Int(bounds.size.width) - space * 3) / cellnumber
+//        let h = (Int(bounds.size.width) + bar - space * 3) / cellnumber
+//        return CGSize(width: w, height: h)
+        return CGSize(width: bounds.size.width, height: bounds.size.width)
     }
     
 }

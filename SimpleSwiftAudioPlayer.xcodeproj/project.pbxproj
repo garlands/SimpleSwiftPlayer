@@ -44,15 +44,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4403DBA0230129CC0076CE64 /* simpleswiftplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleswiftplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4403DBA0230129CC0076CE64 /* SimpleSwiftAudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSwiftAudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4403DBA3230129CC0076CE64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4403DBAA230129CE0076CE64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4403DBAD230129CE0076CE64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4403DBAF230129CE0076CE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4403DBB4230129CE0076CE64 /* simpleswiftplayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleswiftplayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4403DBB4230129CE0076CE64 /* SimpleSwiftAudioPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSwiftAudioPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4403DBB8230129CE0076CE64 /* simpleswiftplayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleswiftplayerTests.swift; sourceTree = "<group>"; };
 		4403DBBA230129CE0076CE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4403DBBF230129CE0076CE64 /* simpleswiftplayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleswiftplayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4403DBBF230129CE0076CE64 /* SimpleSwiftAudioPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSwiftAudioPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4403DBC3230129CE0076CE64 /* simpleswiftplayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleswiftplayerUITests.swift; sourceTree = "<group>"; };
 		4403DBC5230129CE0076CE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4403DBD223012AC30076CE64 /* AlbumList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlbumList.storyboard; sourceTree = "<group>"; };
@@ -107,9 +107,9 @@
 		4403DBA1230129CC0076CE64 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4403DBA0230129CC0076CE64 /* simpleswiftplayer.app */,
-				4403DBB4230129CE0076CE64 /* simpleswiftplayerTests.xctest */,
-				4403DBBF230129CE0076CE64 /* simpleswiftplayerUITests.xctest */,
+				4403DBA0230129CC0076CE64 /* SimpleSwiftAudioPlayer.app */,
+				4403DBB4230129CE0076CE64 /* SimpleSwiftAudioPlayerTests.xctest */,
+				4403DBBF230129CE0076CE64 /* SimpleSwiftAudioPlayerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,9 +158,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4403DB9F230129CC0076CE64 /* simpleswiftplayer */ = {
+		4403DB9F230129CC0076CE64 /* SimpleSwiftAudioPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4403DBC8230129CE0076CE64 /* Build configuration list for PBXNativeTarget "simpleswiftplayer" */;
+			buildConfigurationList = 4403DBC8230129CE0076CE64 /* Build configuration list for PBXNativeTarget "SimpleSwiftAudioPlayer" */;
 			buildPhases = (
 				4403DB9C230129CC0076CE64 /* Sources */,
 				4403DB9D230129CC0076CE64 /* Frameworks */,
@@ -170,14 +170,14 @@
 			);
 			dependencies = (
 			);
-			name = simpleswiftplayer;
+			name = SimpleSwiftAudioPlayer;
 			productName = simpleswiftplayer;
-			productReference = 4403DBA0230129CC0076CE64 /* simpleswiftplayer.app */;
+			productReference = 4403DBA0230129CC0076CE64 /* SimpleSwiftAudioPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4403DBB3230129CE0076CE64 /* simpleswiftplayerTests */ = {
+		4403DBB3230129CE0076CE64 /* SimpleSwiftAudioPlayerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4403DBCB230129CE0076CE64 /* Build configuration list for PBXNativeTarget "simpleswiftplayerTests" */;
+			buildConfigurationList = 4403DBCB230129CE0076CE64 /* Build configuration list for PBXNativeTarget "SimpleSwiftAudioPlayerTests" */;
 			buildPhases = (
 				4403DBB0230129CE0076CE64 /* Sources */,
 				4403DBB1230129CE0076CE64 /* Frameworks */,
@@ -188,14 +188,14 @@
 			dependencies = (
 				4403DBB6230129CE0076CE64 /* PBXTargetDependency */,
 			);
-			name = simpleswiftplayerTests;
+			name = SimpleSwiftAudioPlayerTests;
 			productName = simpleswiftplayerTests;
-			productReference = 4403DBB4230129CE0076CE64 /* simpleswiftplayerTests.xctest */;
+			productReference = 4403DBB4230129CE0076CE64 /* SimpleSwiftAudioPlayerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4403DBBE230129CE0076CE64 /* simpleswiftplayerUITests */ = {
+		4403DBBE230129CE0076CE64 /* SimpleSwiftAudioPlayerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4403DBCE230129CE0076CE64 /* Build configuration list for PBXNativeTarget "simpleswiftplayerUITests" */;
+			buildConfigurationList = 4403DBCE230129CE0076CE64 /* Build configuration list for PBXNativeTarget "SimpleSwiftAudioPlayerUITests" */;
 			buildPhases = (
 				4403DBBB230129CE0076CE64 /* Sources */,
 				4403DBBC230129CE0076CE64 /* Frameworks */,
@@ -206,9 +206,9 @@
 			dependencies = (
 				4403DBC1230129CE0076CE64 /* PBXTargetDependency */,
 			);
-			name = simpleswiftplayerUITests;
+			name = SimpleSwiftAudioPlayerUITests;
 			productName = simpleswiftplayerUITests;
-			productReference = 4403DBBF230129CE0076CE64 /* simpleswiftplayerUITests.xctest */;
+			productReference = 4403DBBF230129CE0076CE64 /* SimpleSwiftAudioPlayerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -239,7 +239,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4403DB9B230129CC0076CE64 /* Build configuration list for PBXProject "simpleswiftplayer" */;
+			buildConfigurationList = 4403DB9B230129CC0076CE64 /* Build configuration list for PBXProject "SimpleSwiftAudioPlayer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -252,9 +252,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4403DB9F230129CC0076CE64 /* simpleswiftplayer */,
-				4403DBB3230129CE0076CE64 /* simpleswiftplayerTests */,
-				4403DBBE230129CE0076CE64 /* simpleswiftplayerUITests */,
+				4403DB9F230129CC0076CE64 /* SimpleSwiftAudioPlayer */,
+				4403DBB3230129CE0076CE64 /* SimpleSwiftAudioPlayerTests */,
+				4403DBBE230129CE0076CE64 /* SimpleSwiftAudioPlayerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,12 +327,12 @@
 /* Begin PBXTargetDependency section */
 		4403DBB6230129CE0076CE64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4403DB9F230129CC0076CE64 /* simpleswiftplayer */;
+			target = 4403DB9F230129CC0076CE64 /* SimpleSwiftAudioPlayer */;
 			targetProxy = 4403DBB5230129CE0076CE64 /* PBXContainerItemProxy */;
 		};
 		4403DBC1230129CE0076CE64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4403DB9F230129CC0076CE64 /* simpleswiftplayer */;
+			target = 4403DB9F230129CC0076CE64 /* SimpleSwiftAudioPlayer */;
 			targetProxy = 4403DBC0230129CE0076CE64 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -520,7 +520,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/simpleswiftplayer.app/simpleswiftplayer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleSwiftAudioPlayer.app/SimpleSwiftAudioPlayer";
 			};
 			name = Debug;
 		};
@@ -541,7 +541,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/simpleswiftplayer.app/simpleswiftplayer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleSwiftAudioPlayer.app/SimpleSwiftAudioPlayer";
 			};
 			name = Release;
 		};
@@ -588,7 +588,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4403DB9B230129CC0076CE64 /* Build configuration list for PBXProject "simpleswiftplayer" */ = {
+		4403DB9B230129CC0076CE64 /* Build configuration list for PBXProject "SimpleSwiftAudioPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4403DBC6230129CE0076CE64 /* Debug */,
@@ -597,7 +597,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4403DBC8230129CE0076CE64 /* Build configuration list for PBXNativeTarget "simpleswiftplayer" */ = {
+		4403DBC8230129CE0076CE64 /* Build configuration list for PBXNativeTarget "SimpleSwiftAudioPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4403DBC9230129CE0076CE64 /* Debug */,
@@ -606,7 +606,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4403DBCB230129CE0076CE64 /* Build configuration list for PBXNativeTarget "simpleswiftplayerTests" */ = {
+		4403DBCB230129CE0076CE64 /* Build configuration list for PBXNativeTarget "SimpleSwiftAudioPlayerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4403DBCC230129CE0076CE64 /* Debug */,
@@ -615,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4403DBCE230129CE0076CE64 /* Build configuration list for PBXNativeTarget "simpleswiftplayerUITests" */ = {
+		4403DBCE230129CE0076CE64 /* Build configuration list for PBXNativeTarget "SimpleSwiftAudioPlayerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4403DBCF230129CE0076CE64 /* Debug */,

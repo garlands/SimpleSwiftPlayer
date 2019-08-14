@@ -1,6 +1,6 @@
 //
 //  track.swift
-//  SwiftTest
+//  SimpleSwiftAudioPlayer
 //
 //  Created by Masahiro Tamamura on 2018/08/10.
 //  Copyright © 2018年 Masahiro Tamamura. All rights reserved.

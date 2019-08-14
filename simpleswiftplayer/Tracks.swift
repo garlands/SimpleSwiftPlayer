@@ -1,6 +1,6 @@
 //
 //  Tracks.swift
-//  SimpleSwiftPlayer
+//  SimpleSwiftAudioPlayer
 //
 //  Created by Masahiro Tamamura on 2018/08/12.
 //  Copyright © 2018年 Masahiro Tamamura. All rights reserved.
@@ -48,7 +48,7 @@ class Tracks {
                     if let artwork = item.value(forProperty:MPMediaItemPropertyArtwork) {
                         artwork_image = (artwork as AnyObject).image(at:CGSize(width:80, height:80))!
                     }else{
-                        artwork_image = UIImage(named: "logo.png")!
+                        artwork_image = UIImage(named: "no_image.png")!
                     }
                     //            let artwork = item.value(forProperty:MPMediaItemPropertyArtwork) as! MPMediaItemArtwork
                     //            MPMediaItemArtwork.init(image: UIImage (data: (self.musicModel?.musicimg)!)!)] as [String : Any]

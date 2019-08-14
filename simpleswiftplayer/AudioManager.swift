@@ -1,6 +1,6 @@
 //
 //  AudioManager.swift
-//  SimpleSwiftPlayer
+//  SimpleSwiftAudioPlayer
 //
 //  Created by Masahiro Tamamura on 2018/08/12.
 //  Copyright © 2018年 Masahiro Tamamura. All rights reserved.
@@ -52,7 +52,8 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
     var albums : Array<Album>?
 //    var album : Album?
     var album_title : String?
-    var albumArtwork : MPMediaItemArtwork?
+//    var albumArtwork : MPMediaItemArtwork?
+    var albumArtworkImage : UIImage?
     var album_index : Int = 0
     var tracks : Array<Track>?
     var currentTrackIndex : Int = 0
@@ -254,9 +255,8 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
     func getCurrentAlbumTitle() -> String {
         if let als : Array<Album> = albums {
             if album_index < als.count {
-                if let al : Album = als[album_index] {
-                    return al.title
-                }
+                let al : Album = als[album_index]
+                return al.title
             }
         }
         return ""
@@ -265,7 +265,7 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
     func setupAlbum(){
         if album_index < albums!.count {
             let album : Album = (albums?[album_index])!
-            albumArtwork = album.artwork
+            albumArtworkImage = album.artworkImage
         }
     }
     
@@ -296,10 +296,8 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
     }
     
     func getCurrentTrackArtworkImage(size : CGSize) -> UIImage? {
-        if let artwork : MPMediaItemArtwork = albumArtwork {
-            if let image : UIImage =  artwork.image(at: size) {
-                return image
-            }
+        if let artworkImage : UIImage = albumArtworkImage {
+            return artworkImage
         }
         return nil
     }

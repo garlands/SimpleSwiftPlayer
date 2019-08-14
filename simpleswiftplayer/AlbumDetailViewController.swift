@@ -1,6 +1,6 @@
 //
 //  AlbumDetailViewController.swift
-//  SimpleSwiftPlayer
+//  SimpleSwiftAudioPlayer
 //
 //  Created by Masahiro Tamamura on 2018/08/12.
 //  Copyright © 2018年 Masahiro Tamamura. All rights reserved.
