@@ -49,12 +49,9 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
     var audioPlayer: AVAudioPlayer!
     var delegate : AudioManagerDelegate?
     
-    var albums : Array<Album>?
-//    var album : Album?
     var album_title : String?
-//    var albumArtwork : MPMediaItemArtwork?
     var albumArtworkImage : UIImage?
-    var album_index : Int = 0
+    var album_index : Int = -1
     var tracks : Array<Track>?
     var currentTrackIndex : Int = 0
     var selected_music : Bool = false
@@ -97,8 +94,6 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
                 prepare_music = true;
                 playStartMusic()
             }
-//        default:
-//            print("ireegal play_kind")
         }
     }
     
@@ -250,23 +245,6 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
             return
         }
         delegate.audioStatus(state: AudioState.stop)
-    }
-    
-    func getCurrentAlbumTitle() -> String {
-        if let als : Array<Album> = albums {
-            if album_index < als.count {
-                let al : Album = als[album_index]
-                return al.title
-            }
-        }
-        return ""
-    }
-    
-    func setupAlbum(){
-        if album_index < albums!.count {
-            let album : Album = (albums?[album_index])!
-            albumArtworkImage = album.artworkImage
-        }
     }
     
     func countTracks() -> Int {
