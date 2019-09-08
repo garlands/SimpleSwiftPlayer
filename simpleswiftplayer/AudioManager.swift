@@ -131,13 +131,17 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
     }
     
     func playStartMusic() {
-        audioPlayer.play()
-        changeAudioState(state: AudioState.play)
+        if let audio : AVAudioPlayer = audioPlayer {
+            audio.play()
+            changeAudioState(state: AudioState.play)
+        }
     }
     
     func pauseMusic() {
-        audioPlayer.pause()
-        changeAudioState(state: AudioState.stop)
+        if let audio : AVAudioPlayer = audioPlayer {
+            audio.pause()
+            changeAudioState(state: AudioState.stop)
+        }
     }
     
     func playMusic(){

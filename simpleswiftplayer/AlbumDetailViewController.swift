@@ -97,10 +97,39 @@ extension AlbumDetailViewController: UITableViewDataSource {
         return 60
     }
     
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath){
+        avmgr.pauseMusic()
+        avmgr.terminateAudioPlayer()
+        
+        let track : Track = tracks[indexPath.row]
+        
+        let alert: UIAlertController = UIAlertController(title: track.albumtitle, message: "", preferredStyle:  UIAlertController.Style.actionSheet)
+        let playAction: UIAlertAction = UIAlertAction(title: "play", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in
+            if self.album_index != self.avmgr.album_index {
+                self.avmgr.tracks = self.tracks
+                self.avmgr.album_index = self.album_index
+                self.avmgr.album_title = self.album.title
+                self.avmgr.albumArtworkImage = self.album.artworkImage
+            }
+            self.avmgr.startSelectMusic(index: indexPath.row)
+        })
+        let cancelAction: UIAlertAction = UIAlertAction(title: "cancel", style: UIAlertAction.Style.cancel, handler:{
+            (action: UIAlertAction!) -> Void in
+            print("cancelAction")
+        })
+        
+        alert.addAction(playAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     func updateLabels(){
         
     }
 }
+
+
 
 extension AlbumDetailViewController: UITableViewDelegate {
     
